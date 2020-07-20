@@ -1,0 +1,65 @@
+$orange-color: #ff6b00;
+$green-color: #a7c93d;
+$dark-grey-color: #444444;
+$gray-color: #666666;
+$dark-color: #000000;
+$yellow-color: #ffbf02;
+$medium-font: 20px;
+$large-font: 34px;
+$gradient-style: rgba(243, 249, 255, 0.7);
+
+@mixin advantages($img-url) {
+    position: absolute;
+    content: '';
+    background-image: url($img-url);
+    width: 46px;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin color-line($color, $height) {
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: $height;
+    background-color: $color;
+}
+
+@mixin input-style {
+    width: 100%;
+    padding: 18px 42px;
+    border-radius: 24px;
+    border: none;
+    background: #eef2f7;
+}
+
+@mixin image-circle($color, $content: '') {
+    position: absolute;
+    content: $content;
+    top: 0;
+    left: 140px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: $color;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+@mixin image-border($color) {
+    position: absolute;
+    content: '';
+    top: -15px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid $color;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
